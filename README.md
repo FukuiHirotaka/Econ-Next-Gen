@@ -1,2 +1,2 @@
-# Econ=Next⇒Gen
+# Econ=Next⇒Gen Conference
 Econ=Next⇒Gen
