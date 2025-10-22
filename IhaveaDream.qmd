@@ -1,1 +1,70 @@
+---
+title: Econ = Next ⇒ Gen
+subtitle: The Adam Smith Publish System: Making Economics Open Science
+header: Please click [HERE](https://kazuyanagimoto.com/quarto-academic-typst/template-full.pdf) for the latest version.
+author:
+  - name: Hirotaka Fukui
+    email: 227e127e@gsuite.kobe-u.ac.jp
+    orcid: 0009-0007-1967-8304
+    affiliations:
+      - name: CEMFI
+abstract: |
+  {{< lipsum 1 >}}
+thanks: |
+  This template is inspired by Kieran Healy's [LaTeX and Rmd template](https://github.com/kjhealy/latex-custom-kjh) and
+  Andrew Heiss's [Hikmah Quarto template](https://github.com/andrewheiss/hikmah-academic-quarto). 
+The code is available [here](https://kazuyanagimoto.com/quarto-academic-typst/template-full.qmd).
+keywords: [Quarto, Typst, format]
+custom-keywords:
+  - name: JEL Codes
+    values: [J16, J22, J31]    
+date: today
+date-format: full
+bibliography: references.bib
+format:
+  academic-typst:
+    section-numbering: "1.1.1"
+    bibliographystyle: "chicago-author-date"
+    include-in-header:
+      - text: '#import "@preview/mitex:0.2.4": *'
+brand: 
+  typography:
+    fonts:
+      - family: Jost
+        source: google
+        weight: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+      - family: Libertinus Serif
+        source: file
+        files:
+          - path: static/fonts/Libertinus-7.051/static/OTF/LibertinusSerif-Regular.otf
+          - path: static/fonts/Libertinus-7.051/static/OTF/LibertinusSerif-Italic.otf
+            style: italic
+      - family: Libertinus Math
+        source: file
+        files:
+          - path: static/fonts/Libertinus-7.051/static/OTF/LibertinusMath-Regular.otf
+    base: Libertinus Serif
+    headings: Jost
+  defaults:
+    academic-typst:
+      mathfont: Libertinus Math
+execute: 
+  echo: false
+  warning: false
+---
 
+# Motivation
+
+Contemporary economics faces a paradox, both technical and moral. Never before have economists possessed such computational power, data accessibility, and algorithmic sophistication; yet the institutional infrastructure that underlies our research practice remains opaque, fragmented, and increasingly dependent on proprietary ecosystems. Code is scattered across personal repositories; datasets are locked behind restrictive licenses; and the journey from an exploratory notebook to a verifiable, citable paper remains neither transparent nor reproducible. Peer review, the discipline’s primary mechanism of validation, often takes place behind closed doors, relying on trust rather than verifiable evidence of replication.
+
+This situation is not merely inconvenient. It undermines the very epistemic foundations of economics as a science. If empirical results cannot be reproduced, if the computational chain from data to inference cannot be inspected, then our discipline risks drifting toward a form of scholasticism that is eloquent but unverifiable. The challenge is therefore not only technical but philosophical: we must redesign the conditions under which economic knowledge is produced, validated, and shared.
+
+**Econ = Next ⇒ Gen** is an attempt to meet this challenge at its root. The project begins from a simple yet radical premise: a research paper should be a living, executable document rather than a static artifact. A single Quarto (`.qmd`) file should integrate text, data access, computational code, and environment specifications, such that any reader can render the document and reproduce its figures, tables, and results. The goal is to make reproducibility an intrinsic property of economic writing, not an optional afterthought. In this vision, authority flows not from reputation but from reproduction.
+
+This approach is deeply indebted to the pioneering work of [Kazuharu Yanagimoto](https://kazuyanagimoto.com/), who has articulated a new philosophy of computational scholarship through his [Research Workflow with Quarto + {targets} (2025)](https://kazuyanagimoto.com/blog/2025/0426_research_workflow/), [Researching as if to Blog (2024)](https://kazuyanagimoto.com/blog/2024/04/05/), and his [quarto-academic-typst](https://github.com/kazuyanagimoto/quarto-academic-typst) framework. Yanagimoto’s contributions collectively advance a paradigm in which research is treated as a continuous, transparent, and reproducible process. His workflow demonstrates that by combining Quarto’s literate programming capabilities with the `{targets}` pipeline in `R`, it is possible to develop projects in which each analytical step, from the initial production of raw data to the final figure, is automatically traceable and regenerable. His essay Researching as if to Blog reframes academic writing as an ongoing public conversation, emphasizing immediacy, openness, and iterative refinement over static publication. Finally, his `academic-typst` project integrates elegant typesetting and modern automation into an open pipeline that unites narrative and computation.
+
+These ideas represent a turning point for computational economics. They show that the reproducibility crisis is not a matter of individual negligence but of workflow design. Yanagimoto’s framework enables a single scholar to achieve reproducibility and transparency with remarkable efficiency. Building upon this foundation, **Econ = Next ⇒ Gen** aims to elevate the same principles from the level of individual practice to that of institutional architecture. It seeks to connect thousands of such reproducible workflows within a unified, open-source ecosystem that integrates version control, ethical authentication, decentralized storage, DOI-based publication, and AI-assisted verification.
+
+In this sense, the project extends Yanagimoto’s vision from a philosophy of how we research to a proposal for how economics itself might be reconstituted. By embedding reproducibility into the structure of publication, peer review, and citation, **Econ = Next ⇒ Gen** aspires to create an environment where the credibility of research derives from its inspectability; where journals become verifiers rather than gatekeepers; and where replication is as natural as reading.
+
+This transformation is not a technological indulgence but an ethical necessity. Economics wields profound influence over policy and public life. A discipline whose claims shape societies must be as transparent as the principles it advocates. To make economic science open, executable, and auditable is therefore to renew its social contract—to ensure that our pursuit of truth remains accessible, verifiable, and worthy of public trust.
